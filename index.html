@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AptitudeArena</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-logo">
+      <img src="LOGO AA.png" alt="Aptitude Arena Logo" style="height:100px; display:flex; justify-content:center; align-items:center; vertical-align:middle;">
+    </div>
+    <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#contact-footer">Contact Us</a></li>
+        <li><a href="#" id="user-icon-link" title="Login / Profile"><i class="fa-solid fa-user user-icon"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Login Modal -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <div class="input-group"><i class="fa-regular fa-envelope"></i><input type="email" placeholder="Gmail" id="email" class="underline-input"></div>
+      <div class="input-group" style="display:flex; align-items:center;">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" placeholder="Password" id="password" class="underline-input" style="flex:1;">
+        <span id="toggle-login-password" style="margin-left:8px; cursor:pointer;"><i class="fa-regular fa-eye"></i></span>
+      </div>
+      <button class="login-submit">Login</button>
+      <p class="forgot-link"><a href="#">Forgot password?</a></p>
+      <p class="register-link">Not registered? <a href="#">Register now!</a></p>
+      <button type="button" class="custom-login-btn skip-btn" id="skip-btn">Skip</button>
+    </div>
+  </div>
+  <!-- Random Rules Modal -->
+  <div class="modal" id="random-rules-modal" style="display:none;">
+    <div class="modal-content" style="max-width:350px;">
+      <h2 style="color:#38bdf8;">Random Quiz Rules</h2>
+      <ul style="text-align:left; font-size:1rem; color:#f4f6fa; margin-bottom:18px;">
+        <li>20 questions will be randomly selected from a pool of 100.</li>
+        <li>You have 180 seconds (3 minutes) to complete the quiz.</li>
+        <li>You can use Previous, Next, and Skip buttons.</li>
+        <li>You can submit anytime, or it will auto-submit after time is up.</li>
+        <li>After submission, you will see your score and correct answers.</li>
+      </ul>
+      <div style="text-align:center;">
+        <button id="random-proceed-yes" class="custom-login-btn" style="width:100px;">Yes</button>
+        <button id="random-proceed-no" class="custom-login-btn" style="width:100px; background:#ef4444; color:#fff; margin-left:10px;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Modal -->
+  <div class="modal" id="category-modal">
+    <div class="modal-content">
+      <h2>Select Category</h2>
+      <select id="category-select-modal">
+        <option value="science">Science</option>
+        <option value="geography">Geography</option>
+        <option value="history">History</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="sports">Sports</option>
+        <option value="music">Music</option>
+        <option value="random">Random</option>
+      </select>
+      <button id="start-quiz-modal-btn">Start Quiz</button>
+      <button class="skip-btn" id="cancel-category-modal">Cancel</button>
+    </div>
+  </div>
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to AptitudeArena</h1>
+    <h5>Sharpen your mind and test your knowledge across a wide range of categories including Science, History, Geography, Entertainment, Sports, Music, and more. Whether you're preparing for competitive exams or just love a good challenge, AptitudeArena is your go-to hub for fun, engaging, and informative quizzes. Dive into the arena and prove your aptitude</h5>
+    <button id="start-quiz-btn">Start Quiz</button>
+  </main>
+  <!-- Feedback Section -->
+  <div id="feedback-section">
+    <form id="feedback-form" class="custom-login-form feedback-form">
+      <h2 class="custom-login-title" style="color:#38bdf8;">We Value Your Feedback</h2>
+      <div class="custom-input-group"><i class="fa-regular fa-user"></i><input type="text" id="fb-name" class="custom-login-input" placeholder="Your Name (optional)"></div>
+      <div class="custom-input-group"><i class="fa-regular fa-envelope"></i><input type="email" id="fb-email" class="custom-login-input" placeholder="Your Email (optional)"></div>
+      <div class="custom-input-group" style="align-items:flex-start;">
+        <i class="fa-regular fa-comment-dots" style="margin-top:10px;"></i>
+        <textarea id="fb-message" class="custom-login-input" placeholder="Your Feedback" rows="4" required style="resize:vertical; min-height:60px; background:transparent; border:none; color:#38bdf8; width:100%;"></textarea>
+      </div>
+      <div style="margin:10px 0 0 0;">
+        <label style="color:#bae6fd; font-size:1rem; font-weight:500;">How do you rate your experience?</label>
+        <div style="margin-top:6px; display:flex; gap:10px;">
+          <label title="1 - Poor"><input type="radio" name="fb-rating" value="1" required> 😞</label>
+          <label title="2"><input type="radio" name="fb-rating" value="2"> 😐</label>
+          <label title="3"><input type="radio" name="fb-rating" value="3"> 🙂</label>
+          <label title="4"><input type="radio" name="fb-rating" value="4"> 😃</label>
+          <label title="5 - Excellent"><input type="radio" name="fb-rating" value="5"> 🤩</label>
+        </div>
+      </div>
+      <button type="submit" class="custom-login-btn" style="margin-top:18px;">Submit Feedback</button>
+      <div id="fb-success" style="display:none; color:#22c55e; margin-top:10px; text-align:center;">Thank you for your feedback!</div>
+    </form>
+  </div>
+  <!-- Footer -->
+  <div style="height:600px;"></div>
+  <footer id="contact-footer">
+    <p>&copy; 2025 AptitudeArena. All rights reserved.</p>
+    <div class="contact-details">
+      <strong>Contact Us:</strong><br>
+      Email us: <a href="mailto:info.aptitudearena@gmail.com">info.aptitudearena@gmail.com</a><br>
+      Call us: <a href="tel:+918420773877">+91 8420773877</a><br>
+      Address: 81, Nilgunj Road, Jagarata Pally, Deshpriya Nagar, Agarpara, Kolkata, WB 700109, India
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
