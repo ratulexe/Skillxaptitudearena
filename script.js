@@ -917,6 +917,11 @@ const questionsByCategory = {
   options: ["Dr. Homi Bhabha", "Dr. Vikram Sarabhai", "Dr. A.P.J. Abdul Kalam", "Dr. Manmohan Singh"],
   answer: "Dr. A.P.J. Abdul Kalam"
 },
+ {
+  question: "Operation Sindoor was launched in response in which terror incident'?",
+  options: ["Uri Attack", "Pulwama Attack", "Pahalgham Attack", "Pathankot Attack"],
+  answer: "Pahalgham Attack"
+},   
 {
   question: "Which Indian city is known as the Silicon Valley of India?",
   options: ["Hyderabad", "Mumbai", "Chennai", "Bengaluru"],
@@ -1316,4 +1321,5 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
 });
