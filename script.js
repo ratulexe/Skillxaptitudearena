@@ -966,7 +966,7 @@ function showRandomRulesModal(startCallback) {
       <div class="modal-content" style="max-width:350px;">
         <h2 style="color:#38bdf8;">Random Quiz Rules</h2>
         <ul style="text-align:left; font-size:1rem; color:#f4f6fa; margin-bottom:18px;">
-          <li>20 questions will be randomly selected from a pool of 100.</li>
+          <li>Randomly 20 questions will be selected.</li>
           <li>You have 180 seconds (3 minutes) to complete the quiz.</li>
           <li>You can use Previous, Next, and Skip buttons.</li>
           <li>You can submit anytime, or it will auto-submit after time is up.</li>
@@ -1323,3 +1323,4 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 });
+
